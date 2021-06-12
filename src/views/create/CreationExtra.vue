@@ -69,7 +69,6 @@ import Vue from 'vue'
 import Button from '@/components/Button.vue'
 import NavMenuHome from '@/components/NavMenu/NavMenuHome.vue'
 import TextField from '@/components/TextField.vue'
-import ContestDTO from '../../api/models/Contest'
 import { API } from '@/api'
 
 export default Vue.extend({
@@ -100,7 +99,7 @@ export default Vue.extend({
       this.$router.push('/create/skills').catch((err: string) => { return err })
     },
     async toFinish () {
-      const contest: ContestDTO = {
+      const contest: any = {
         extra: {
           OMerit: +this.OMerit,
           EMerit: +this.EMerit,
