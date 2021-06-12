@@ -1,0 +1,178 @@
+{   
+    "combobox": {
+        "loading": "Cargando...",
+        "notOptions": "Sin opciones"
+    },
+    "main":{
+        "retrievingData": "Cargando...",
+        "confirm": "Está seguro de querer abandonar el proceso ?"
+    },
+    "error": {
+        "title404": "Oooops !! Error 404",
+
+        "errors_404": {
+            "STP_KO24": "Error guardando paso 24: Firmado OK"
+        }
+    },
+    "menu": {
+        "home": "Home",
+        "profile": "Perfil",
+        "apply": "Aplicar",
+        "now": "ahora",
+        "create": "Crear",
+        "contest": "Concurso",
+        "settings": "Ajustes"
+    },
+    "settings": {
+        "language": "Idioma",
+        "english": "Inglés",
+        "spanish": "Español",
+        "dark": "Dark mode",
+        "session": "Cerrar sesión"
+    },
+    "buttons": {
+        "accept": "Aceptar",
+        "access": "Acceder",
+        "send": "Enviar",
+        "back": "Volver",
+        "continue": "Continuar",
+        "calculate": "Calcular",
+        "close": "Cerrar",
+        "save": "Guardar",
+        "yes":"Si",
+        "no":"No",
+        "tryAgain":"Intentarlo de nuevo",
+        "start":"Comenzar",
+        "login":"Login",
+        "register":"Registro",
+        "signin":"Sign in",
+        "signup":"Sign up",
+        "apply": "Aplicar",
+        "create": "Crear",
+        "detail": "Detalle",
+        "upload": "Subir fichero",
+        "createContest": "Crear concurso"
+    },
+    "validations": {
+        "required": "Requerido",
+        "max40": "Máximo 40 caracteres",
+        "max200": "Máximo 200 caracteres",
+        "between010": "Valor entre 0-10",
+        "between0100": "Valor entre 0-100",
+        "positive": "Debe ser positivo",
+        "cellphone": "Teléfono inválido",
+        "alpha":"Solo caracteres alfabéticos"
+    },
+    "merits":{
+        "official":"Título oficial",
+        "experience":"Mérito de experiencia",
+        "punctual":"Mérito puntual",
+        "knowledge":"Mérito de conocimiento"
+    },
+    "login":{
+        "title": "Login",
+        "email": "Correo",
+        "password": "Contraseña",
+        "social": "O entra utilizando tus redes sociales",
+        "new": "¿Eres nuevo?",
+        "newSubtitle": "Crea una cuenta ya mismo !"
+    },
+    "register":{
+        "title": "Register",
+        "email": "Correo",
+        "password": "Contraseña",
+        "social": "O regístrate utilizando tus redes sociales",
+        "new": "¿Uno de los nuestros?",
+        "newSubtitle": "No pierdas tiempo y accede con tus credenciales!"
+    },
+    "dashboard":{
+        "titleApply":"Navega a través de puestos de trabajo",
+        "subtitleApply": "y aplica fácilmente en solo unos pasos, el resultado dependerá únicamente de tus méritos propios",
+        "titleCreate":"Construye tu propio proceso de selección",
+        "subtitleCreate": "escoge los requerimientos y habilidades que quieras, pon una fecha límite y relájate y espera los resultados"
+    },
+    "profile":{
+        "titleCreated":"Concursos creados por mi",
+        "titleApplied":"Concursos a los que he aplicado",
+        "name":"Nombre",
+        "field":"Ámbito",
+        "dueDate":"Fecha límite"
+    },
+    "detail":{
+        "title":"Concurso al detalle",
+        "name":"Nombre",
+        "score":"Puntuación",
+        "status":"Status"
+    },
+    "apply":{
+        "title":"Concurso",
+        "titlePersonal":"Datos personales",
+        "titleRequirements":"Requerimientos",
+        "titleSkills":"Habilidades altamente valorables",
+        "titleExtra":"Habilidades extra",
+        "titleFinish":"Felicidades !!",
+        "subtitleFinish":"Has terminado el proceso con un buen resultado, accede a tu ",
+        "subtitleFinish2":"perfil ",
+        "subtitleFinish3":"para más",
+        "subtitleExtra": "Aquí puedes añadir habilidades extra, ten en cuenta que estas tendrán un impacto menor, puedes duplicar las filas si es necesario",
+        "subtitleSkills": "Estas habilidades tendrán un gran impacto en tu resultado",
+        "subtitleRequirements": "Estos son los requerimientos obligatorios para aplicar",
+        "name":"Nombre",
+        "field":"Ámbito",
+        "dueDate":"Fecha límite",
+        "firstName": "Nombre",
+        "secondName":"Apellidos",
+        "dateBirth":"Fecha de nacimiento",
+        "phone":"Teléfono",
+        "country": "País",
+        "grade": "Nota media",
+        "date": "Fecha obtención",
+        "time": "Duración",
+        "months": "Meses"
+    },
+    "create":{
+        "title":"Proceso de creación",
+        "titleGeneral":"Parámetros generales",
+        "titleRequirements":"Requerimientos",
+        "titleSkills":"Habilidades altamente valorables",
+        "titleExtra":"Habilidades extra",
+        "titleFinish":"Felicidades !!",
+        "subtitleFinish":"Has creado con éxito el concurso, accede a tu ",
+        "subtitleFinish2":"perfil ",
+        "subtitleFinish3":"para saber más, o pulsa aceptar para volver al home",
+        "subtitleExtra": "Aquí podrás seleccionar la importancia de habilidades extra, estas no serán obligatorias y tendrán un impacto leve en la valoración",
+        "subtitleSkills": "Añade habilidades específicas que consideres altamente importantes, estas no serán obligatorias y pero tendrán un impacto alto en la valoración",
+        "subtitleRequirements": "Aquí podrás añadir los requisitos mínimos para aplicar, puedes duplicar las filas si es necesario",
+        "name":"Introduce un nombre para tu concurso",
+        "company":"Compañía",
+        "field":"Ámbito",
+        "dueDate": "Fecha límite",
+        "vacancies":"Número de vacantes",
+        "description":"Descripción",
+        "titlePlaceholder":"Título",
+        "weight":"Valoración",
+        "extraOfficial":"Cualquier título oficial extra",
+        "extraExperience":"Cualquier experiencia extra",
+        "extraPunctual":"Cualquier mérito puntual extra",
+        "extraKnowledge":"Cualquier mérito de conocimiento extra"
+    },
+    "info": {
+        "cheat":"Guía",
+        "profile":"Sigue el estado de tus aplicaciones, o gestiona tus concursos",
+        "apply":"Aquí encontrarás los concursos abiertos, y aplicar a ellos con solo un click, pulsa sobre las filas para saber más de cada concurso",
+        "create":"Comienza la creación dando un nombre apropiado a tu concurso",
+        "detail":"Aquí podrás comprobar el estado del concurso",
+        "createGeneral":"Por favor rellena adecuadamente todos los campos para la correcta creación del concurso",
+        "official":"-Título Oficial: grado universitario, formación profesional, máster, doctorado...",
+        "experience":"-Mérito de experiencia: experiencias de trabajo, prácticas, voluntariados, becarías...",
+        "punctual":"-Mérito puntual: pueden ser charlas, publicaciones, revistas, libros...",
+        "knowledge":"-Mérito de conocimiento: un idioma, tecnología , títulos no oficiales, certificados...",
+        "createRequirements": "Estos requisitos serán obligatorios para aplicar, por lo que selecciona las aptitudes principales que estés buscando",
+        "createSkills":"Estas habilidades tendrán un gran impacto, introdúcelas sabiamente",
+        "createExtra":"Aunque no tendrán una gran importancia en líneas generales, trata de darles mayor peso a las relacionadas con el concurso",
+        "personalData":"Por favor rellena todos los campos adecuadamente para que tu proceso de aplicación finalice de forma correcta",
+        "applyRequirements": "No podrás saltarte ninguno de estos ! ...por favor asegúrate de adjuntar los archivos correctos",
+        "applySkills":"No son obligatorias, pero ten en cuenta que son muy importantes de cara a la puntuación ...por favor asegúrate de adjuntar los archivos correctos",
+        "applyExtra":"Último paso! ...asegúrate de añadir todas las habilidades que te quedan"
+    }
+}

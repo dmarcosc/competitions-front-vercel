@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow-y: hidden;
+  }
+  $main-background: #C9D6FF;
+  $main-background2: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+  $main-background3: linear-gradient(to right, #E2E2E2, #C9D6FF);
+  .app-container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position:relative;
+    overflow: hidden;
+    min-width: 100vw;
+  }
+  .v-application--wrap{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    position:relative;
+    overflow: hidden;
+    background:$main-background;
+      background: $main-background2;
+      background: $main-background3;
+      &.dark-theme{
+        background: rgb(26, 25, 25) !important;
+      }
+      .error {
+        background:$main-background !important;
+        background: $main-background2 !important;
+        background: $main-background3 !important;
+      }
+  }
+  #app{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      position:relative;
+      overflow: hidden;
+  }
+  .home {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }

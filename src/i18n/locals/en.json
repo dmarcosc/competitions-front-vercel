@@ -1,0 +1,179 @@
+{   
+    "combobox": {
+        "loading": "Loading...",
+        "notOptions": "No options"
+    },
+    "main":{
+        "retrievingData": "Loading...",
+        "confirm": "Are you sure you want to leave the process ?"
+    },
+    "error": {
+        "title404": "Oooops !! Error 404",
+
+        "errors_404": {
+            "STP_KO24": "Error guardando paso 24: Firmado OK"
+        }
+    },
+    "menu": {
+        "home": "Home",
+        "profile": "Profile",
+        "apply": "Apply",
+        "now": "now",
+        "create": "Create",
+        "contest": "Contest",
+        "settings": "Settings"
+    },
+    "settings": {
+        "language": "Language",
+        "english": "English",
+        "spanish": "Spanish",
+        "dark": "Dark mode",
+        "session": "End session"
+    },
+    "buttons": {
+        "accept": "Accept",
+        "access": "Access",
+        "send": "Send",
+        "back": "Back",
+        "continue": "Continue",
+        "calculate": "Calculate",
+        "close": "Close",
+        "save": "Save",
+        "yes":"Yes",
+        "no":"No",
+        "tryAgain":"Try Again",
+        "start":"Start",
+        "login":"Login",
+        "register":"Register",
+        "signin":"Sign in",
+        "signup":"Sign up",
+        "apply": "Apply",
+        "create": "Create",
+        "detail": "Detail",
+        "upload": "Upload file",
+        "createContest": "Create contest"
+    },
+    "validations": {
+        "required": "Required",
+        "max40": "Max 40 characters",
+        "max200": "Max 200 characters",
+        "between010": "Value between 0-10",
+        "between0100": "Value between 0-100",
+        "positive": "Must be positive",
+        "cellphone": "Invalid cellphone",
+        "alpha":"Only alphabetic characters"
+    },
+    "merits":{
+        "official":"Official Title",
+        "experience":"Experience Merit",
+        "punctual":"Punctual Merit",
+        "knowledge":"Knowledge Merit"
+    },
+    "login":{
+        "title": "Login",
+        "email": "Email",
+        "password": "Password",
+        "social": "Or login with social platforms",
+        "new": "New here?",
+        "newSubtitle": "Create an account and start yout journey today!"
+    },
+    "register":{
+        "title": "Register",
+        "email": "Email",
+        "password": "Password",
+        "social": "Or Sign up with social platforms",
+        "new": "One of us?",
+        "newSubtitle": "Don't waste time and log in with your credentials"
+    },
+    "dashboard":{
+        "titleApply":"Browse through job and open position listings",
+        "subtitleApply": "and easily apply in just a few steps, the result will only deppend on your own merits",
+        "titleCreate":"Build your own selection process",
+        "subtitleCreate": "choose the requirements and skills you want, set a deadline, sit down and wait for results"
+    },
+    "profile":{
+        "titleCreated":"Contests created by me",
+        "titleApplied":"Contests I applied for",
+        "name":"Name",
+        "field":"Field",
+        "dueDate":"Due date"
+    },
+    "detail":{
+        "title":"Contests detail",
+        "name":"Name",
+        "score":"Score",
+        "status":"Status"
+    },
+    "apply":{
+        "title":"Contests",
+        "titlePersonal":"Personal data",
+        "titleRequirements":"Requirements",
+        "titleSkills":"Highly valuable skills",
+        "titleExtra":"Extra skills",
+        "titleFinish":"Congratulations !!",
+        "subtitleFinish":"You have succesfully finished your application with a nice score, check your ",
+        "subtitleFinish2":"profile ",
+        "subtitleFinish3":"for more",
+        "subtitleExtra": "Here you can add any extra skill, note that this skills will have less impact in your score, you can also duplicate the rows if needed",
+        "subtitleSkills": "This skills will have a huge impact in your overall score",
+        "subtitleRequirements": "This are the mandatory requirements to apply",
+        "name":"Name",
+        "field":"Field",
+        "dueDate":"Due date",
+        "firstName": "First name",
+        "secondName":"Second name",
+        "dateBirth":"Date of birth",
+        "phone":"Phone number",
+        "country": "Country",
+        "grade": "Grade point average",
+        "date": "Date of completion ",
+        "time": "Duration",
+        "months": "Months"
+    },
+    "create":{
+        "title":"Creation process",
+        "titleGeneral":"General params",
+        "titleRequirements":"Requirements",
+        "titleSkills":"Highly valuable skills",
+        "titleExtra":"Extra skills",
+        "titleFinish":"Congratulations !!",
+        "subtitleFinish":"You succesfully created your contest, check your ",
+        "subtitleFinish2":"profile ",
+        "subtitleFinish3":"to know more, or just press accept and go to the dashboard",
+        "subtitleExtra": "Here you can set the importance of any generic extra skill, these won't be mandatory and won't have a significant impact overall",
+        "subtitleSkills": "Add specific skills you value most, you can also duplicate the rows if needed, these won't be mandatory but will have a significant impact overall",
+        "subtitleRequirements": "Here you can set the minimum requirements needed to apply, you can also duplicate the rows if needed",
+        "name":"Please enter a name for your contest",
+        "company":"Company/Employer",
+        "field":"Field",
+        "dueDate": "Due date",
+        "vacancies":"Number of vacancies",
+        "description":"Description",
+        "titlePlaceholder":"Title",
+        "weight":"Weight",
+        "extraOfficial":"Any extra official title",
+        "extraExperience":"Any extra experience merit",
+        "extraPunctual":"Any extra punctual merit",
+        "extraKnowledge":"Any extra knowledge merit"
+    },
+    "info": {
+        "cheat":"Cheat sheet",
+        "profile":"Check the status of the contests you applied for, or manage the ones you created",
+        "apply":"Here you can browse through opened contests, and easily apply in just one click, you can also expand the rows to know more about the contest",
+        "create":"Start the creation process by giving a descriptive name of the contest you want to build",
+        "detail":"Here you can check the current status of the process",
+        "createGeneral":"Please fill all this fields accurately to ensure your contest is created correctly",
+        "official":"-Official Title: master degrees, bachelor degrees, language title, phd...",
+        "experience":"-Experience Merit: scholarship, internship or working experiences.",
+        "punctual":"-Punctual Merit: such as talks, papers, books...",
+        "knowledge":"-Knowledge Merit: any language, technology , unofficial titles, certificates...",
+        "createRequirements": "This requirements will be mandatory to apply, so pick the basic skills you are looking for ",
+        "createSkills":"This skills will have a huge impact in the overall score, pick them wisely",
+        "createExtra":"Even though this may not be very important, try to give more weight to the ones related with the contest!",
+        "personalData":"Please fill all this fields accurately to ensure your apply is processed correctly",
+        "applyRequirements": "You can't skip any of these ! ...please make sure you upload the right files",
+        "applySkills":"These are not mandatory, but keep in mind they are important ...please make sure you upload the right files",
+        "applyExtra":"Last step! ...make sure you add all the skills you have left"
+    }
+}
+
