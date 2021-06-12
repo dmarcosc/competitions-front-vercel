@@ -29,7 +29,6 @@ import Vue from 'vue'
 import Button from '@/components/Button.vue'
 import NavMenu from '../../components/NavMenu/NavMenu.vue'
 import TextField from '@/components/TextField.vue'
-import ContestDTO from '../../api/models/Contest'
 
 export default Vue.extend({
   name: 'Create',
@@ -51,7 +50,7 @@ export default Vue.extend({
   },
   methods: {
     toGeneralParams () {
-      const contest: ContestDTO = {
+      const contest: any = {
         name: this.title
       }
       this.$store.dispatch('session/updateContest', { contest })

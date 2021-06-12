@@ -153,7 +153,6 @@ import TextField from '@/components/TextField.vue'
 import AddButton from '@/components/AddButton.vue'
 import NavMenuHome from '@/components/NavMenu/NavMenuHome.vue'
 import TextArea from '@/components/TextArea.vue'
-import ContestDTO from '../../api/models/Contest'
 
 export default Vue.extend({
   name: 'CreationRequirements',
@@ -309,7 +308,7 @@ export default Vue.extend({
           description: this.KMDesc4
         })
       }
-      const contest: ContestDTO = {
+      const contest: any = {
         requirements: {
           OMerit,
           EMerit,

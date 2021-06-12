@@ -54,7 +54,6 @@ import TextField from '@/components/TextField.vue'
 import DateField from '@/components/DateField.vue'
 import TextArea from '@/components/TextArea.vue'
 import NavMenuHome from '@/components/NavMenu/NavMenuHome.vue'
-import ContestDTO from '../../api/models/Contest'
 
 export default Vue.extend({
   name: 'GeneralParams',
@@ -89,7 +88,7 @@ export default Vue.extend({
       this.$router.push('/create').catch((err: string) => { return err })
     },
     toMinRequirements () {
-      const contest: ContestDTO = {
+      const contest: any = {
         employer: this.company,
         field: this.field,
         dueDate: this.dueDate?.split('-').join('/'),
