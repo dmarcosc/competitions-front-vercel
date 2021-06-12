@@ -29,7 +29,7 @@ import Vue from 'vue'
 import Button from '@/components/Button.vue'
 import NavMenu from '../../components/NavMenu/NavMenu.vue'
 import TextField from '@/components/TextField.vue'
-import ContestDTO from '@/api/models/Contest'
+import ContestDTO from '../../api/models/Contest'
 
 export default Vue.extend({
   name: 'Create',

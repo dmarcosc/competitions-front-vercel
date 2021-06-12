@@ -54,7 +54,7 @@ import TextField from '@/components/TextField.vue'
 import DateField from '@/components/DateField.vue'
 import TextArea from '@/components/TextArea.vue'
 import NavMenuHome from '@/components/NavMenu/NavMenuHome.vue'
-import ContestDTO from '@/api/models/Contest'
+import ContestDTO from '../../api/models/Contest'
 
 export default Vue.extend({
   name: 'GeneralParams',
