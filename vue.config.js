@@ -3,6 +3,7 @@ module.exports = {
     'vuetify'
   ],
   chainWebpack: config => {
+    config.plugins.delete('prefetch')
     config.module
       .rule('i18n')
       .resourceQuery(/blockType=i18n/)
