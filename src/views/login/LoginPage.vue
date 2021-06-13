@@ -36,19 +36,20 @@
               {{ $t('login.social') }}
             </p>
             <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f" />
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter" />
-              </a>
-              <a href="#" class="social-icon">
+              <a v-google-signin-button="clientId" class="social-icon" @click="isLogin=true">
                 <i class="fab fa-google" />
               </a>
-              <a href="#" class="social-icon">
+              <a href="#" class="social-icon-disabled">
+                <i class="fab fa-facebook-f" />
+              </a>
+              <a href="#" class="social-icon-disabled">
+                <i class="fab fa-twitter" />
+              </a>
+              <a href="#" class="social-icon-disabled">
                 <i class="fab fa-linkedin-in" />
               </a>
             </div>
+            <span class="coming-soon">*Coming soon</span>
           </form>
           <form class="sign-up-form" @click.prevent>
             <h2 class="titles">
@@ -77,19 +78,20 @@
               {{ $t('register.social') }}
             </p>
             <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f" />
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter" />
-              </a>
-              <a href="#" class="social-icon">
+              <a v-google-signin-button="clientId" class="social-icon" @click="isLogin=false">
                 <i class="fab fa-google" />
               </a>
-              <a href="#" class="social-icon">
+              <a href="#" class="social-icon-disabled">
+                <i class="fab fa-facebook-f" />
+              </a>
+              <a href="#" class="social-icon-disabled">
+                <i class="fab fa-twitter" />
+              </a>
+              <a href="#" class="social-icon-disabled">
                 <i class="fab fa-linkedin-in" />
               </a>
             </div>
+            <span class="coming-soon">*Coming soon</span>
           </form>
         </div>
       </div>
@@ -136,14 +138,21 @@ import Button from '@/components/Button.vue'
 import BlueBall from '@/components/BlueBall.vue'
 import { validateEmail } from '@/utils/validations'
 import { API } from '@/api/index.ts'
+import GoogleSignInButton from 'vue-google-signin-button-directive'
+
 export default {
   name: 'LoginPage',
   components: {
     Button,
     BlueBall
   },
+  directives: {
+    GoogleSignInButton
+  },
   data () {
     return {
+      isLogin: false,
+      clientId: '126258924188-amosth6ihfeljmmrc0jf7o199310oini.apps.googleusercontent.com',
       signUpMode: false,
       password: '',
       email: '',
@@ -256,6 +265,68 @@ export default {
       } if (this.emailRegisterInvalid || this.passRegisterInvalid) {
         return true
       } else return false
+    },
+    async OnGoogleAuthSuccess (idToken) {
+      if (!this.isLogin) {
+        this.$store.dispatch('ui/showMask', {
+          text: this.$t('main.retrievingData')
+        })
+        try {
+          const resp = await API.user.registerGoogle(idToken)
+          if (resp?.status === 201) {
+            resp?.data?.token ? window.localStorage.setItem('tokenClient', JSON.stringify(resp.data.token)) : console.log('Error saving login credentials')
+            this.$router.push('/dashboard').catch((err) => { return err })
+          } else {
+            this.$router.push({
+              name: 'Error404',
+              params: {
+                errorType: 'Login error'
+              }
+            }).catch((err) => { return err })
+          }
+        } catch (err) {
+          console.log(err)
+          this.$router.push({
+            name: 'Error404',
+            params: {
+              errorType: 'Login error'
+            }
+          }).catch((err) => { return err })
+        } finally {
+          this.$store.dispatch('ui/hideMask')
+        }
+      } else {
+        this.$store.dispatch('ui/showMask', {
+          text: this.$t('main.retrievingData')
+        })
+        try {
+          const resp = await API.user.loginGoogle(idToken)
+          if (resp?.status === 200) {
+            resp?.data?.token ? window.localStorage.setItem('tokenClient', JSON.stringify(resp.data.token)) : console.log('Error saving login credentials')
+            this.$router.push('/dashboard').catch((err) => { return err })
+          } else {
+            this.$router.push({
+              name: 'Error404',
+              params: {
+                errorType: 'Login error'
+              }
+            }).catch((err) => { return err })
+          }
+        } catch (err) {
+          console.log(err)
+          this.$router.push({
+            name: 'Error404',
+            params: {
+              errorType: 'Login error'
+            }
+          }).catch((err) => { return err })
+        } finally {
+          this.$store.dispatch('ui/hideMask')
+        }
+      }
+    },
+    OnGoogleAuthFail (error) {
+      console.log(error)
     }
   }
 }
@@ -403,7 +474,30 @@ form.sign-in-form {
   align-items: center;
   justify-content: space-around;
 }
-
+.social-icon-disabled {
+  background-color:rgb(167, 164, 164);
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #333;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+   &:active{
+        transform: scale(1.12);
+      }
+}
+.coming-soon{
+  font-size: .8rem;
+  color: #36eb12;
+}
 .social-icon {
   height: 46px;
   width: 46px;
@@ -419,6 +513,9 @@ form.sign-in-form {
   transition: all .3s;
   position: relative;
   overflow: hidden;
+  &.disabled{
+    background: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+  }
   &:active{
         transform: scale(1.12);
       }
@@ -706,7 +803,7 @@ form.sign-in-form {
 
 @media (max-width: 570px) {
   form {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem !important;
   }
 
   .image {

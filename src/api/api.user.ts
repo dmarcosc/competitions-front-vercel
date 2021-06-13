@@ -25,6 +25,21 @@ export default {
 
   /**
    * register user
+   * @param idToken - email user
+   */
+  async loginGoogle (idToken: string) {
+    const url = '/api/login/google'
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    const body = {
+      idToken
+    }
+    return xhr.post(url, body, { headers })
+  },
+
+  /**
+   * register user
    * @param email - email user
    * @param password - password user
    */
@@ -36,6 +51,21 @@ export default {
     const body = {
       email,
       password
+    }
+    return xhr.post(url, body, { headers })
+  },
+
+  /**
+   * register user
+   * @param idToken - email user
+   */
+  async registerGoogle (idToken: string) {
+    const url = '/api/users/google'
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    const body = {
+      idToken
     }
     return xhr.post(url, body, { headers })
   },
