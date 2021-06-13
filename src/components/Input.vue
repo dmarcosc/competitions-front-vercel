@@ -8,6 +8,7 @@
     class="file-input"
     :placeholder="$t('buttons.upload')"
     @click="!disabled&&$emit('click')"
+    @change="!disabled&&$emit('change')"
   />
 </template>
 
