@@ -138,7 +138,9 @@ export default Vue.extend({
       ETime: [] as any,
       PDesc: [] as any,
       KGrades: [] as any,
-      KDates: [] as any
+      KDates: [] as any,
+      fileO: 'iVBORw0KGgoAAAANSUhEAC1AC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJHAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJUgAAAAEAAAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJAABCAQAAAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJhNjVkOGYxNDdmYTc0MWIwYTZkN2ZjNDNlMTgzNjNjOSIsCiAgImVudGl0eV=',
+      fileK: 'ewogICJhcHBJZCI6IAC1HAwAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJCAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJAAAAC0lEQVQYV2NgAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJYAAAAAMAAWgmWQ0AAAAASUVORK5CYIAC1HAwCAAAAC0lEQVQYV2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYIIjVjMSIsCiAgImFwaUtleSI6ICJIjVjMSIsCiAgImFwaUtleSI6ICJCI3MGNjZThhZGI5M2M0Yzk2OGE3YjE0ODNmMmVkZjVjMSIsCiAgImFwaUtleSI6ICJhNjVkOGYxNDdmYTc0MWIwYTZkN2ZjNDNlMTgzNjNjOSIsCiAgImVudGl0eVR5cGUiOiAiVG9kbyIsCiAgImVudGl0eUlkIjogIjItMCIsCiAgImJsb2JOYW1lIjogInBpY3R1cmUiCn0='
     }
   },
   mounted () {
@@ -165,7 +167,7 @@ export default Vue.extend({
     toSkills () {
       const OMerit: Array<{grade: number; date: string; file: string}> = new Array(0)
       for (let i = 0; i < this.OGrades.length; i++) {
-        OMerit.push({ grade: +this.OGrades[i], date: this.ODates[i]?.split('-').join('/'), file: '' })
+        OMerit.push({ grade: +this.OGrades[i], date: this.ODates[i]?.split('-').join('/'), file: this.fileO })
       }
       const EMerit: Array<{time: number; description: string; company: string}> = new Array(0)
       for (let i = 0; i < this.OGrades.length; i++) {
@@ -177,7 +179,7 @@ export default Vue.extend({
       }
       const KMerit: Array<{grade: number; date: string; file: string}> = new Array(0)
       for (let i = 0; i < this.KGrades.length; i++) {
-        KMerit.push({ grade: +this.KGrades[i], date: this.KDates[i]?.split('-').join('/'), file: '' })
+        KMerit.push({ grade: +this.KGrades[i], date: this.KDates[i]?.split('-').join('/'), file: this.fileK })
       }
       const participation: ParticipationDTO = {
         contest: this.contestId,
@@ -200,6 +202,12 @@ export default Vue.extend({
       const aux = document.getElementById('fileUpload')
       if (aux) aux.click()
     }
+    // saveFilesO () {
+    //   this.fileO = (document as any).getElementById('fileUpload')?.files.toBase64()
+    // },
+    // saveFilesK () {
+    //   this.fileK = (document as any).getElementById('fileUpload')?.files.toBase64()
+    // }
   }
 })
 </script>
